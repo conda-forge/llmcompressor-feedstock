@@ -1,5 +1,5 @@
 {% set name = "llmcompressor" %}
-{% set version = "0.7.1" %}
+{% set version = "0.8.1" %}
 
 package:
   name: llmcompressor
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/l/llmcompressor/llmcompressor-{{ version }}.tar.gz
-  sha256: 11824bb19613027040eeaefbda4c04c7126abac5cf65b3679025ad88aa01ccb5
+  sha256: 54a29c3235ee6280348170a3b63997881186908fe08a0066928702791a916687
 
 build:
   entry_points:
@@ -31,17 +31,17 @@ requirements:
   run:
     - python >={{ python_min }}
     - loguru >=0.7.2,<=0.7.3
-    - pyyaml >=6.0.1,<=6.0.2
-    - numpy >=2.0.0,<=2.3.2
+    - pyyaml >=6.0.1,<=6.0.3
+    - numpy >=2.0.0,<=2.3.3
     - requests >=2.32.2,<=2.32.5
     - tqdm >=4.66.3,<=4.67.1
     - pytorch >=2.7.0,<=2.8.0
-    - transformers >=4.53.0,<=4.55.2
-    - datasets >=4.0.0,<=4.1.0
-    - accelerate >=1.6.0,<=1.10.0
-    - pynvml >=11.5.3,<=12.0.0
-    - pillow >=10.4.0,<=10.4.0
-    - compressed-tensors ==0.11.0
+    - transformers >=4.53.0,<=4.56.2
+    - datasets >=4.0.0,<=4.1.1
+    - accelerate >=1.6.0,<=1.10.1
+    - nvidia-ml-py >=12.560.30,<=13.580.82
+    - pillow >=10.4.0,<=11.3.0
+    - compressed-tensors ==0.12.2
 
 test:
   imports:
