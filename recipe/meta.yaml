@@ -39,7 +39,7 @@ requirements:
     - transformers >=4.53.0,<=4.56.2
     - datasets >=4.0.0,<=4.1.1
     - accelerate >=1.6.0,<=1.10.1
-    - pynvml >=12.560.30,<=13.580.82
+    - nvidia-ml-py >=12.560.30,<=13.580.82
     - pillow >=10.4.0,<=11.3.0
     - compressed-tensors ==0.12.2
 
