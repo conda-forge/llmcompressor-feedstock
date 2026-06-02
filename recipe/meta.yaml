@@ -1,5 +1,5 @@
 {% set name = "llmcompressor" %}
-{% set version = "0.10.0.1" %}
+{% set version = "0.10.0.2" %}
 
 package:
   name: llmcompressor
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/l/llmcompressor/llmcompressor-{{ version }}.tar.gz
-  sha256: f8915064ab47f14245e01f1d99012420c7ddf77b56612d368522afb959893a65
+  sha256: bf9cf664ea9865920fb1ae6e71e4080d5d0ce6f6dd93d772b5eb24c0e9fb754e
 
 build:
   entry_points:
