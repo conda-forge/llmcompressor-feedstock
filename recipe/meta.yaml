@@ -9,7 +9,7 @@ source:
   url: https://pypi.org/packages/source/l/llmcompressor/llmcompressor-{{ version }}.tar.gz
   sha256: fe7ea06a0fbaaf69195eb51583985c6f063eb392413c77aae93aa02425fc0fc6
   patches:
-    - optional-autoround.patch
+    - allow-autoround-0.15.patch
 
 build:
   entry_points:
@@ -40,6 +40,7 @@ requirements:
     - pytorch >=2.10.0,<=2.13.0
     - transformers >=5.9.0,<=5.14.1
     - datasets >=4.8.4,<=5.0.1
+    - auto-round >=0.14.1,<=0.15.0
     - accelerate >=1.6.0,<=1.14.0
     - nvidia-ml-py >=12.560.30,<=13.610.43
     - pillow >=10.4.0,<13.0.0
@@ -48,6 +49,7 @@ requirements:
 test:
   imports:
     - llmcompressor
+    - llmcompressor.modifiers.autoround
   commands:
     - pip check
     - llmcompressor.trace --help
