@@ -8,6 +8,8 @@ package:
 source:
   url: https://pypi.org/packages/source/l/llmcompressor/llmcompressor-{{ version }}.tar.gz
   sha256: fe7ea06a0fbaaf69195eb51583985c6f063eb392413c77aae93aa02425fc0fc6
+  patches:
+    - optional-autoround.patch
 
 build:
   entry_points:
@@ -26,23 +28,22 @@ requirements:
     - python {{ python_min }}.*
     - setuptools
     - wheel
-    - setuptools-scm >8
+    - setuptools-scm ==8.2.0
     - pip
   run:
     - python >={{ python_min }}
     - loguru >=0.7.2,<=0.7.3
     - pyyaml >=6.0.1,<=6.0.3
-    - numpy >=2.0.0,<=2.4.2
-    - requests >=2.32.2,<=2.32.5
-    - tqdm >=4.66.3,<=4.67.3
-    - pytorch >=2.9.0,<=2.10.0
-    - transformers >=4.56.1,<=4.57.6
-    - datasets >=4.0.0,<=4.6.0
-    - auto-round >=0.9.6,<=0.10.2
-    - accelerate >=1.6.0,<=1.12.0
-    - nvidia-ml-py >=12.560.30,<=13.590.48
-    - pillow >=10.4.0,<=12.1.1
-    - compressed-tensors ==0.14.0.1
+    - numpy >=2.0.0,<=2.4.6
+    - requests >=2.32.2,<2.35.0
+    - tqdm >=4.66.3,<=4.70.0
+    - pytorch >=2.10.0,<=2.13.0
+    - transformers >=5.9.0,<=5.14.1
+    - datasets >=4.8.4,<=5.0.1
+    - accelerate >=1.6.0,<=1.14.0
+    - nvidia-ml-py >=12.560.30,<=13.610.43
+    - pillow >=10.4.0,<13.0.0
+    - compressed-tensors ==0.18.0
 
 test:
   imports:
