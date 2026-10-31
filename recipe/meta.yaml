@@ -1,5 +1,5 @@
 {% set name = "llmcompressor" %}
-{% set version = "0.14.0.1" %}
+{% set version = "0.15.0" %}
 
 package:
   name: llmcompressor
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/l/llmcompressor/llmcompressor-{{ version }}.tar.gz
-  sha256: 073d24101072675c701a646d3aa6daa02d99d501e1a851b975cfd06319eae8b1
+  sha256: e11740c5b35bb53da3797200871ce8f25dc5308e047ff95bf5ffbe53cf34a785
 
 build:
   entry_points:
@@ -30,19 +30,19 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - loguru >=0.7.2,<=0.7.3
-    - pyyaml >=6.0.1,<=6.0.3
-    - numpy >=2.0.0,<=2.5.3
-    - requests >=2.32.2,<2.35.0
-    - tqdm >=4.66.3,<=4.70.1
-    - pytorch >=2.10.0,<=2.14.0
-    - transformers >=5.15.0,<=5.17.0
-    - datasets >=4.8.4,<=5.0.1
-    - auto-round >=0.14.1,<=0.15.1
-    - accelerate ==1.15.0
-    - nvidia-ml-py >=12.560.30,<=13.610.43
-    - pillow >=10.4.0,<13.0.0
-    - compressed-tensors ==0.19.0
+    - loguru >=0.7.2
+    - pyyaml >=6.0.1
+    - numpy >=2.0.0
+    - requests >=2.32.2
+    - tqdm >=4.66.3
+    - pytorch >=2.10.0,<=2.14.1
+    - transformers >=5.15.0,<=5.21.0
+    - datasets >=4.8.4
+    - auto-round >=0.15.1
+    - accelerate >=1.15.0
+    - nvidia-ml-py >=12.560.30
+    - pillow >=12.0.0
+    - compressed-tensors ==0.20.1
 
 test:
   imports:
